@@ -1,4 +1,6 @@
-from pydantic import BaseModel,Optional
+from pydantic import BaseModel
+from typing import Optional
+
 class JobCreate(BaseModel):
     title:str
     salary:int

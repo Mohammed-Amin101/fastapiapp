@@ -27,6 +27,6 @@
 # -Router --routes requests to controllers
 # -Controller --controller logic
 # -Service --business logic
-# -Repository --data
-# -Middleware --request
-#-schema  -- pydantic
+# -Repository --data access layer
+# -Middleware --request processing pipeline
+#-schema  -- pydantic 
