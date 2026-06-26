@@ -1,14 +1,14 @@
-#fastapiapp
-#creating fastapi application
-##CRUD operations
+# fastapiapp
+# creating fastapi application
+## CRUD operations
 # create
 # read
 # update
 # delete
 
-REST API
-POST
-GET
+# REST API
+# POST
+# GET
 
 ## Status code
 # 200 ok
