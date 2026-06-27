@@ -15,4 +15,8 @@ class CompanyUpdate(CompanyBase):
     phone: Optional[str] = None
     
 class CompanyResponse(CompanyBase):
-    pass
+    id:int
+    jobs:list[JobResponse]
+
+    class Config:
+        from_attributes = True

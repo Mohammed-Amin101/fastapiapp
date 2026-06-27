@@ -1,6 +1,7 @@
+from os import name
 from fastapi import APIRouter,HTTPException,Depends,status
 from schemas.company import CompanyCreate, CompanyUpdate, CompanyResponse
-from models import company,job
+from models.company import Company
 from sqlalchemy.orm import Session
 from database import get_db,sessionLocal
 
@@ -8,8 +9,8 @@ from database import get_db,sessionLocal
 router = APIRouter(prefix="/company",tags=["company"])
 
 @router.post("/",status_code=status.HTTP_201_CREATED,response_model=CompanyResponse)
-def create_company(company: CompanyCreate,db:Session=Depends(get_db)):
-    pass
+def create_company(company: CompanyCreate, db:Session = Depends(get_db)):
+    db_company = company(**company.dict())
 
 
 @router.get("/",status_code=status.HTTP_200_OK,response_model=list[CompanyResponse])
