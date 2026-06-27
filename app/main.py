@@ -19,4 +19,4 @@ def read_about():
 
 @app.get("/contact")
 def read_contact():
-    return {"This is contact page"}
+    return {"This is contact page"}     
