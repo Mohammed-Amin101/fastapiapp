@@ -7,18 +7,14 @@ class JobBase(BaseModel):
     description: Optional[str] = None
     company_id:int
 
-class JobCreate(BaseModel):
+class JobCreate(JobBase):
     pass
+
 class JobUpdate(BaseModel):
     title: Optional[str] = None
     salary: Optional[int] = None
     description: Optional[str] = None
-    company_id:Optional[str] = None
-
-class JobUpdate(JobBase):
-    salary:Optional[int] = None
-    description:Optional[str] = None
-    salary:Optional[str] = None
+    company_id: Optional[int] = None
 
 class JobResponse(JobBase):
     id: int
