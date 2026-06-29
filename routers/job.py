@@ -3,11 +3,13 @@ from schemas.job import JobCreate,JobUpdate,JobResponse
 from models.job import Job
 from sqlalchemy.orm import Session
 from database import get_db,sessionLocal
+
+
 router = APIRouter(prefix="/job", tags=["job"] )
 
 @router.post("/",status_code=status.HTTP_201_CREATED,response_model=JobResponse)
-def create_jobs(company: JobCreate, db:Session = Depends(get_db)):
-    db_job = Job(**company.dict())
+def create_jobs(job: JobCreate, db:Session = Depends(get_db)):
+    db_job = Job(**job.dict())
     db.add(db_job)
     db.commit()
     db.refresh(db_job)
