@@ -172,11 +172,3 @@ Open your browser:
 * **ReDoc:** `http://127.0.0.1:8000/redoc`
 
 ---
-
-# 💡 Goal
-
-This project is designed as a clean and beginner-friendly FastAPI template that demonstrates REST API development, CRUD operations, and layered architecture, making it easy to scale into production-ready applications.
-
----
-
-⭐ If you find this project helpful, consider giving it a star!
