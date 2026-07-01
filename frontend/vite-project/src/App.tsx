@@ -42,7 +42,11 @@ function App(){
     {/* <Welcome /> */}
     <br />
     <CompanyCard 
-    companies={companies}/>
+      companies={companies}
+      onedit={() => {}}
+      ondelete={() => {}}
+      onadd={() => {}}
+    />
     <JobCard />
     <Footer />
     </>
